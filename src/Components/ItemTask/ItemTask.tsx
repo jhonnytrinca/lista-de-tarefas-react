@@ -1,12 +1,11 @@
-import { useState } from "react"
+import { useState, ChangeEvent} from "react"
 import { Props } from "../Interfaces/Interfaces"
 
 const ItemTask = ({Task, DeleteTask}: Props) => {
   const [Checked, SetChecked] = useState(Task.Done)
   
-  const IsChecked = (e: any) => {
+  const IsChecked = (e: ChangeEvent<HTMLInputElement>) => {
     SetChecked(e.target.checked)
-    e.target.style={textDecorationLine: 'line-through'}
   }
 
 

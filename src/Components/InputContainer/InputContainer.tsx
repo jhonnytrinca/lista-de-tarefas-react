@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, ChangeEvent } from "react"
 
 interface InputContainerProps {
   AddItem: (Description: string) => void
@@ -7,11 +7,11 @@ interface InputContainerProps {
 const InputContainer = ({AddItem}: InputContainerProps) => {
   const [Task, SetTask] = useState<string>("") 
 
-  const HandleChange = (e: any): void => {
+  const HandleChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
     SetTask(e.target.value)
   }
 
-  const HandleSubmit = (e: any): void => {
+  const HandleSubmit = (e: ChangeEvent<HTMLFormElement>): void => {
     e.preventDefault()
     AddItem(Task)
     SetTask('')

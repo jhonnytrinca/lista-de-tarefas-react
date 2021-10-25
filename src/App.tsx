@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import './App.css';
 import InputContainer from './Components/InputContainer/InputContainer';
 import {TaskProps} from './Components/Interfaces/Interfaces'
