@@ -1,10 +1,12 @@
 export interface TaskProps {
-  Description: string
+  Id: number,
+  Description: string,
+  Done: boolean
 }
 
 export interface Props {
   Task: TaskProps
-  DeleteTask(TaskToDelete: string): void
+  DeleteTask(TaskToDelete: number): void
 }
 
 export interface InputContainerProps {

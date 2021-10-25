@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.App {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0 10%;
+  padding: 0;
+  background-color: rgb(218, 241, 238);
+}
+
+.Header {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header h1 {
+  font-size: 35px;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: rgb(7, 7, 78);
+}
+
+.InputContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.Header textarea {
+  width: 75%;
+  height: 25px;
+  padding: 3px;
+  margin-right: 20px;
+  border-radius: 5px;
+  line-height: 25px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+}
+
+.Header button {
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(141, 241, 141);
+  color: white;
+  width: auto;
+}
+
+.List {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.Items {
+  height: 25px;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.Items span {
+  font-family: 'Nunito', sans-serif;
+  color: rgb(7, 7, 78);
+  font-size: 18px;
+  font-weight: bold;
+  flex: 70%;
+  height: 30px;
+  margin: 20px;
+  padding-left: 10px;
+  line-height: 30px;
+}
+
+.Items input {
+  flex: 1%;
+  width: 15px;
+  height: 15px;
+}
+
+.Items input:checked + span {
+  text-decoration: line-through;
+  color: red;
+}
+
+.Items button {
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  background-color: rgb(194, 38, 38);
+  color: white;
+  width: fit-content;
+}
