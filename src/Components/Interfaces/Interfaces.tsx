@@ -1,3 +1,5 @@
+import { ChangeEvent } from "react";
+
 export interface TaskProps {
   Id: number,
   Description: string,
@@ -10,5 +12,8 @@ export interface Props {
 }
 
 export interface InputContainerProps {
-  AddItem: (Description: string) => void
+  Task?: string
+  AddItem?: (Description: string) => void
+  HandleChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void
+  HandleSubmit?: (e: ChangeEvent<HTMLFormElement>) => void  
 }

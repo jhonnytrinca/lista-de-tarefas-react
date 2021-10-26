@@ -1,22 +1,6 @@
-import { useState, ChangeEvent } from "react"
+import {InputContainerProps} from '../Interfaces/Interfaces'
 
-interface InputContainerProps {
-  AddItem: (Description: string) => void
-}
-
-const InputContainer = ({AddItem}: InputContainerProps) => {
-  const [Task, SetTask] = useState<string>("") 
-
-  const HandleChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    SetTask(e.target.value)
-  }
-
-  const HandleSubmit = (e: ChangeEvent<HTMLFormElement>): void => {
-    e.preventDefault()
-    AddItem(Task)
-    SetTask('')
-  }
-
+const InputContainer = ({HandleChange, HandleSubmit, Task}: InputContainerProps) => {
   return(
     <div className="Header">
       <div>
