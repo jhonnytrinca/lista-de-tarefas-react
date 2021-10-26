@@ -17,3 +17,8 @@ export interface InputContainerProps {
   HandleChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void
   HandleSubmit?: (e: ChangeEvent<HTMLFormElement>) => void  
 }
+
+export interface ListProps {
+  ItemList: TaskProps[]
+  DeleteTask: (TaskToDelete: number) => void
+}

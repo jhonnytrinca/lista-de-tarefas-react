@@ -2,7 +2,7 @@ import {useState, ChangeEvent} from 'react';
 import './App.css';
 import InputContainer from './Components/InputContainer/InputContainer';
 import {TaskProps} from './Components/Interfaces/Interfaces'
-import ItemTask from './Components/ItemTask/ItemTask'
+import List from './Components/List/List';
 
 function App() {
   const [ItemList, SetItemList] = useState<TaskProps[]>([])
@@ -32,10 +32,7 @@ function App() {
   return(
     <div>
       <InputContainer AddItem={AddItem} HandleChange={HandleChange} HandleSubmit={HandleSubmit} Task={Task} />
-      <div className="List">
-        {ItemList.map((Task: TaskProps, Id: number) => 
-          <ItemTask key={Id} Task={Task} DeleteTask={DeleteTask}/>)}
-      </div>
+      <List ItemList={ItemList} DeleteTask={DeleteTask}/>
     </div>
   )
 }
