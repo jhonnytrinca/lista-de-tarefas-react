@@ -1,6 +1,6 @@
 import {InputContainerProps} from '../Interfaces/Interfaces'
 
-const InputContainer = ({HandleChange, HandleSubmit, Task}: InputContainerProps) => {
+const InputContainer = ({HandleChange, HandleSubmit, Value}: InputContainerProps) => {
   return(
     <div className="Header">
       <div>
@@ -8,7 +8,7 @@ const InputContainer = ({HandleChange, HandleSubmit, Task}: InputContainerProps)
       </div>
       <form onSubmit={HandleSubmit}>
       <div className="InputContainer">
-        <textarea onChange={HandleChange} value={Task} placeholder="Insira sua tarefa"/>
+        <textarea onChange={HandleChange} value={Value} placeholder="Insira sua tarefa"/>
         <button type="submit">Adicionar</button>
       </div>
       </form>

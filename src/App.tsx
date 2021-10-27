@@ -18,8 +18,8 @@ function App() {
     SetTask('')
   }
 
-  function AddItem(Task: string) {
-    const NewTask = {Id: ItemList.length + 1 , Description: Task, Done: false}
+  function AddItem(Value: string) {
+    const NewTask = {Id: ItemList.length + 1 , Description: Value}
     SetItemList([...ItemList, NewTask])
   }
   
@@ -31,7 +31,7 @@ function App() {
 
   return(
     <div>
-      <InputContainer AddItem={AddItem} HandleChange={HandleChange} HandleSubmit={HandleSubmit} Task={Task} />
+      <InputContainer AddItem={AddItem} HandleChange={HandleChange} HandleSubmit={HandleSubmit} Value={Task} />
       <List ItemList={ItemList} DeleteTask={DeleteTask}/>
     </div>
   )
